@@ -1,0 +1,103 @@
+---
+const plans = [
+  {
+    name: "Básico",
+    price: "29.99",
+    period: "mes",
+    description: "Ideal para quienes quieren empezar a entrenar por su cuenta.",
+    features: [
+      "Acceso área de musculación",
+      "Acceso área de cardio",
+      "Vestuarios y duchas",
+      "Horario restringido (8h - 17h)"
+    ],
+    isPopular: false,
+    ctaText: "Elegir Básico"
+  },
+  {
+    name: "Full",
+    price: "49.99",
+    period: "mes",
+    description: "La experiencia completa con acceso a clases y asesoramiento.",
+    features: [
+      "Acceso libre 24/7",
+      "Clases grupales incluidas",
+      "Rutina personalizada mensual",
+      "Evaluación corporal inicial",
+      "Descuento en suplementos"
+    ],
+    isPopular: true,
+    ctaText: "Empezar con Full"
+  },
+  {
+    name: "Premium",
+    price: "89.99",
+    period: "mes",
+    description: "Entrenamiento VIP con seguimiento intensivo 1 a 1.",
+    features: [
+      "Todo lo del plan Full",
+      "8 sesiones Personal Trainer al mes",
+      "Asesoría nutricional mensual",
+      "Toalla y agua incluidas",
+      "Acceso a zona VIP de recuperación"
+    ],
+    isPopular: false,
+    ctaText: "Quiero el Premium"
+  }
+];
+---
+
+<section id="planes" class="py-24 bg-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-brand font-bold uppercase tracking-widest text-sm mb-2">Planes de Membresía</h2>
+      <h3 class="text-3xl md:text-5xl font-heading font-black text-white mb-6">Invierte en tu mejor versión</h3>
+      <p class="text-gray-400 text-lg">
+        Sin contratos forzosos ni letras pequeñas. Elige el plan que mejor se adapte a tus objetivos.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {plans.map((plan) => (
+        <div class={`relative flex flex-col p-8 rounded-2xl ${plan.isPopular ? 'bg-dark-lighter border-2 border-brand shadow-[0_0_30px_rgba(204,255,0,0.15)] transform md:-translate-y-4' : 'bg-dark border border-dark-border'}`}>
+          
+          {plan.isPopular && (
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand text-dark px-4 py-1 rounded-full font-bold text-sm uppercase tracking-wider">
+              Recomendado
+            </div>
+          )}
+
+          <div class="mb-8">
+            <h4 class="text-2xl font-bold text-white mb-2">{plan.name}</h4>
+            <p class="text-gray-400 text-sm mb-6 h-10">{plan.description}</p>
+            <div class="flex items-baseline text-white">
+              <span class="text-4xl font-heading font-black">${plan.price}</span>
+              <span class="text-gray-400 ml-2">/{plan.period}</span>
+            </div>
+          </div>
+
+          <ul class="space-y-4 mb-8 flex-grow">
+            {plan.features.map((feature) => (
+              <li class="flex items-start">
+                <svg class={`w-5 h-5 mr-3 flex-shrink-0 ${plan.isPopular ? 'text-brand' : 'text-gray-500'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-300 text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a 
+            href={`https://wa.me/1234567890?text=Hola,%20me%20interesa%20el%20plan%20${plan.name}`} 
+            target="_blank"
+            class={`w-full text-center py-4 rounded-xl font-bold transition-all ${plan.isPopular ? 'bg-brand text-dark hover:bg-white hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]' : 'bg-dark-border text-white hover:bg-white hover:text-dark'}`}
+          >
+            {plan.ctaText}
+          </a>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

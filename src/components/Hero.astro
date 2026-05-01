@@ -1,0 +1,100 @@
+---
+---
+
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" 
+      alt="Gimnasio moderno" 
+      class="w-full h-full object-cover object-center"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-transparent"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="max-w-2xl">
+      <!-- Badge -->
+      <div class="inline-flex items-center space-x-2 bg-dark-lighter/50 backdrop-blur-sm border border-dark-border rounded-full px-4 py-2 mb-6 animate-fade-in-up">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
+        </span>
+        <span class="text-sm font-medium text-gray-300 uppercase tracking-wider">+300 alumnos activos</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-heading font-black text-white leading-tight mb-6 animate-fade-in-up" style="animation-delay: 100ms;">
+        Transforma tu cuerpo en <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-brand-dark">90 días</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-xl animate-fade-in-up" style="animation-delay: 200ms;">
+        Entrena en un gimnasio moderno, con entrenadores reales y resultados visibles. No pospongas más tu cambio.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 300ms;">
+        <a 
+          href="https://wa.me/1234567890?text=Hola,%20quiero%20empezar%20mi%20cambio%20hoy" 
+          target="_blank"
+          class="flex items-center justify-center bg-brand text-dark px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(204,255,0,0.2)]"
+        >
+          <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.031 21.085c-1.636 0-3.238-.426-4.664-1.233l-5.32 1.393 1.423-5.183c-.886-1.464-1.353-3.136-1.353-4.856 0-5.188 4.227-9.414 9.42-9.414 2.515 0 4.88 1.012 6.657 2.791A9.435 9.435 0 0121.45 11.205c0 5.188-4.226 9.414-9.42 9.414z" clip-rule="evenodd" />
+          </svg>
+          Escríbenos por WhatsApp
+        </a>
+        
+        <a 
+          href="#planes" 
+          class="flex items-center justify-center bg-transparent border-2 border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:border-white hover:bg-white/5 transition-all transform hover:-translate-y-1"
+        >
+          Ver Planes
+        </a>
+      </div>
+      
+      <!-- Social Proof -->
+      <div class="mt-12 flex items-center gap-4 animate-fade-in-up" style="animation-delay: 400ms;">
+        <div class="flex -space-x-4">
+          <img class="w-10 h-10 rounded-full border-2 border-dark" src="https://i.pravatar.cc/100?img=33" alt="Usuario" />
+          <img class="w-10 h-10 rounded-full border-2 border-dark" src="https://i.pravatar.cc/100?img=47" alt="Usuario" />
+          <img class="w-10 h-10 rounded-full border-2 border-dark" src="https://i.pravatar.cc/100?img=12" alt="Usuario" />
+          <div class="w-10 h-10 rounded-full border-2 border-dark bg-dark-lighter flex items-center justify-center text-xs font-bold text-white">
+            +5k
+          </div>
+        </div>
+        <div class="text-sm text-gray-400">
+          <div class="flex text-brand">
+            ★★★★★
+          </div>
+          Vidas transformadas
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <a href="#beneficios" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors animate-bounce">
+    <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </a>
+</section>
+
+<style>
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+  }
+</style>

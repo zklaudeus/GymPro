@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Benefits from '../components/Benefits.astro';
+import Transformation from '../components/Transformation.astro';
+import Gallery from '../components/Gallery.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Pricing from '../components/Pricing.astro';
+import Location from '../components/Location.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+import Footer from '../components/Footer.astro';
+import FloatingWhatsApp from '../components/FloatingWhatsApp.astro';
+---
+
+<Layout 
+  title="GymPro | Transforma tu cuerpo en 90 días"
+  description="Gimnasio moderno con máquinas premium, entrenadores certificados y planes accesibles. Recupera tu energía y alcanza tus metas. ¡Tu cambio empieza hoy!"
+>
+  <Navbar />
+  
+  <main>
+    <Hero />
+    <Benefits />
+    <Transformation />
+    <Gallery />
+    <Testimonials />
+    <Pricing />
+    <Location />
+    <FinalCTA />
+  </main>
+
+  <Footer />
+  <FloatingWhatsApp />
+</Layout>

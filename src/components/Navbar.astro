@@ -1,0 +1,80 @@
+---
+---
+
+<nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <a href="#" class="text-2xl font-heading font-black text-white uppercase tracking-tighter">
+          Gym<span class="text-brand">Pro</span>
+        </a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#beneficios" class="text-gray-300 hover:text-brand transition-colors text-sm font-medium uppercase tracking-wide">Beneficios</a>
+        <a href="#resultados" class="text-gray-300 hover:text-brand transition-colors text-sm font-medium uppercase tracking-wide">Resultados</a>
+        <a href="#galeria" class="text-gray-300 hover:text-brand transition-colors text-sm font-medium uppercase tracking-wide">Galería</a>
+        <a href="#planes" class="text-gray-300 hover:text-brand transition-colors text-sm font-medium uppercase tracking-wide">Planes</a>
+        <a href="#ubicacion" class="text-gray-300 hover:text-brand transition-colors text-sm font-medium uppercase tracking-wide">Ubicación</a>
+      </div>
+
+      <!-- CTA / WhatsApp -->
+      <div class="hidden md:flex items-center">
+        <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="bg-brand text-dark px-6 py-2.5 rounded-full font-bold hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(204,255,0,0.3)]">
+          Únete Ahora
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-white hover:text-brand focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-dark-lighter border-t border-dark-border absolute w-full">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#beneficios" class="block px-3 py-2 text-base font-medium text-white hover:text-brand">Beneficios</a>
+      <a href="#resultados" class="block px-3 py-2 text-base font-medium text-white hover:text-brand">Resultados</a>
+      <a href="#galeria" class="block px-3 py-2 text-base font-medium text-white hover:text-brand">Galería</a>
+      <a href="#planes" class="block px-3 py-2 text-base font-medium text-white hover:text-brand">Planes</a>
+      <a href="#ubicacion" class="block px-3 py-2 text-base font-medium text-white hover:text-brand">Ubicación</a>
+      <a href="https://wa.me/1234567890" target="_blank" class="block px-3 py-2 text-base font-bold text-brand">Únete Ahora</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+
+  // Navbar background on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navbar?.classList.add('bg-dark/95', 'backdrop-blur-sm', 'border-b', 'border-dark-border');
+    } else {
+      navbar?.classList.remove('bg-dark/95', 'backdrop-blur-sm', 'border-b', 'border-dark-border');
+    }
+  });
+
+  // Close mobile menu on click
+  const mobileLinks = menu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+    });
+  });
+</script>
